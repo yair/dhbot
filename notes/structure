@@ -1,0 +1,17 @@
+Free Applicatives instead of (Free) Monads? https://www.youtube.com/watch?v=H28QqxO7Ihc
+Key slide at 42 minutes in -- Intuition for Free Functor Hierarchy
+- Free Functors: Programs that change values
+- Free Applicatives: Programs that change data
+- Free Monads: Programs that build programs.
+Applicatives are less powerful - we lose the sequencing ability - can't rely on runtime data.
+Argonaut - scala library for decoding json automatically. Exists in ps? Yup - purescript-argonaut
+Natural transformation is better called Functor homomorphism or something. 
+DH should maybe be implemented as a FA, switching to monads only when necessary? Let's see what the web3 code generator comes up with.
+Ditto for the networks? It's mostly data for now. Will take time until we need to act there.
+read filesystem in node -- Purescript-Node-FS-Aff
+read json file through node -- https://www.youtube.com/watch?v=CEDOFwpoorQ
+We might want two configs - json for actual configs, node env for secrets.
+Do we want an IDE? The VS demo showing all installed packages that implement a func to automatically add the correct import line is very handy.
+
+Ok. Where do we start. With the config, probably. Nah, we need to parse command line stuff first.
+Cmdline stuff kinda works. I can't extract the values from there (Effect Array String, dunno how to extract the strings), but can call a function on them, so I'll try to read the JSON config there. Should have a state monad to keep them, then we can return unit. Who cares.
